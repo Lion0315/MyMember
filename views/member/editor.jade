@@ -1,0 +1,44 @@
+﻿extends ../layout
+
+block content
+    div
+        button 上一頁
+    div
+        img(src= "https://paytest.tw.gamagic.com/deposit/image/gameicon/tw/82.png", width='70', height='70')
+        input(type='file' name='myImage')
+    div
+        ul
+            li 
+                label
+                    身分證
+                input(type='text', name='id',placeholder='請輸入身分證')
+            li 
+                label
+                    姓名
+                input(type='text' , name='name' , placeholder='請輸入姓名')
+            li 
+                label
+                    性別
+
+                - var books = ["請選擇", "男", "女"]
+                select
+                    each book, i in books
+                        option(value=i) #{book}
+            li 
+                label
+                    地址
+                input(type='text' , name='address')
+            li 
+                label
+                    電話
+                input(type='text' , name='telephone')
+            li 
+                label
+                    生日
+                input(type='text' name='birthday')
+        div
+            button(type="submit", onClick="javascript:location.href='/home/'") 取消
+            button(type="submit", onClick="javascript:void(0);alert('已修改成功');location.href='/home/'") 確認
+            //if (confirm('Are you sure you want to delete your post?')) window.location.href='http://www.google.com';" 
+
+

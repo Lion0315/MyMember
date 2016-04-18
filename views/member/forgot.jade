@@ -1,0 +1,16 @@
+﻿extends ../layout
+
+block content
+    div
+        a(class='previous', href='/member/login') 上一頁
+    div
+        span.
+            請輸入E-mail
+    div
+        input(
+        type='text'
+        name='email'
+        )
+    div
+        button(type="submit", onClick="javascript:alert('已寄到信箱!!')") 確認
+

@@ -1,0 +1,41 @@
+﻿extends ../layout
+
+block content
+    div.div_block_login
+        div
+           span.
+                帳號(E-mail)
+        div
+           input(
+           type='text'
+           id='ac'
+           name='ac'
+           placeholder='E-mail or Account'
+           ) 
+        div
+            span.
+                密碼
+        div
+           input(
+           type='text'
+           id='pw'
+           name='pw'
+           placeholder='Passworld'
+           )
+        div.dd
+            a(class='forgotpw', href='/member/forgot') 忘記密碼
+        div.div-login
+            button(type="submit" id='submit' onClick="javascript:void(0);location.href='/home/'")登入
+        div 
+            a(class='newaccount', href='/member/new') 註冊新帳號
+
+        div.row
+            div.span4
+                |...
+            div.span3.offset2
+                |...
+
+            
+            
+
+

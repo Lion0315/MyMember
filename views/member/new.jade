@@ -1,0 +1,38 @@
+﻿extends ../layout
+
+block content
+    div
+        input(
+        type='text'
+        id='ac'
+        name='account'
+        placeholder='123'
+        )
+    div
+        input(
+        type='text'
+        name='pw'
+        placeholder='輸入密碼'
+        )
+    div
+        input(
+        type='text'
+        name='repw'
+        placeholder='確認密碼'
+        )
+    div
+        a(class='agree', href='http://www.google.com') 繼續進行表示同意條款
+    div
+        input(type='checkbox' name='agree' id='agree') 
+        label 同意條款
+    div
+        button(type="submit", onClick="next();") 下一步
+    script.
+        var next = function(i){ 
+            if($("#agree").prop("checked")){
+                location.href="/home/";
+            }
+            else{
+                alert('未按下同意條款');
+            }
+        } 
